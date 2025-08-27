@@ -220,6 +220,7 @@ backend/resume/*.docx
 sample_companies.csv
 companies.csv
 contacts.csv
+*.env
 
 # Temporary files
 *.tmp
@@ -370,3 +371,5 @@ temp/
 
 # Local Netlify folder
 .netlify
+./ backend/sent_log.csv
+./backend/resume/my_resume.pdf
