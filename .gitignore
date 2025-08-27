@@ -215,7 +215,7 @@ backend/resume/*.docx
 .env.development
 .env.test
 .env.production
-
+./backend/.env
 # Sample data (may contain real email addresses)
 sample_companies.csv
 companies.csv
