@@ -371,5 +371,6 @@ temp/
 
 # Local Netlify folder
 .netlify
-./ backend/sent_log.csv
-./backend/resume/my_resume.pdf
+
+backend/sent_log.csv
+backend/resume/my_resume.pdf
