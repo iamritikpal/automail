@@ -39,7 +39,7 @@ label {
   font-size: 14px;
 }
 
-input[type="text"], textarea {
+input[type="text"], textarea, input[type="file"] {
   width: 100%;
   padding: 12px 14px;
   border-radius: 10px;
@@ -49,9 +49,28 @@ input[type="text"], textarea {
   outline: none;
 }
 
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus, textarea:focus, input[type="file"]:focus {
   border-color: #334155;
   box-shadow: 0 0 0 4px rgba(51,65,85,0.25);
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: var(--accent);
+  color: #062e0e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--accent-hover);
 }
 
 .hint { color: var(--muted); display: block; margin-top: 6px; }
@@ -86,6 +105,35 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 8px 0 0;
+}
+
+.csv-preview {
+  margin-top: 12px;
+  padding: 12px;
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.csv-preview table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.csv-preview th,
+.csv-preview td {
+  padding: 4px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.csv-preview th {
+  background: #1f2937;
+  font-weight: 600;
 }
 
 

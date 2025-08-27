@@ -11,9 +11,10 @@
       <h1>Cold Email Sender</h1>
 
       <div class="field-group">
-        <label for="emails">Recipient Emails (comma-separated)</label>
-        <textarea id="emails" placeholder="alice@example.com, bob@example.com" rows="4"></textarea>
-        <small class="hint">Paste comma-separated emails. Spaces are OK. Duplicates will be removed.</small>
+        <label for="csvFile">Upload CSV File</label>
+        <input id="csvFile" type="file" accept=".csv" />
+        <small class="hint">CSV must contain 'company_name' and 'email' columns. Headers are required.</small>
+        <div id="csvPreview" class="csv-preview" hidden></div>
       </div>
 
       <div class="field-row">
@@ -24,8 +25,9 @@
       </div>
 
       <div class="field-group">
-        <label for="message">Message (HTML supported)</label>
-        <textarea id="message" placeholder="<p>Hello there,</p><p>This is a sample email.</p>" rows="10"></textarea>
+        <label for="message">Message Template (HTML supported)</label>
+        <textarea id="message" placeholder="<p>Hello {{company_name}},</p><p>I'm interested in opportunities at your company.</p>" rows="10"></textarea>
+        <small class="hint">Use {{company_name}} as a placeholder - it will be replaced with the actual company name for each email.</small>
       </div>
 
       <div class="actions">
